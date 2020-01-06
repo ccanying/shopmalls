@@ -19,10 +19,12 @@ export default {
 .nav-bar{
     display: flex;
     height: 44px;
-    box-shadow: 0px 1px 1px rgba(100,100,100,0.1)
+    box-shadow: 0px 1px 1px rgba(100,100,100,0.1);
+    text-align: center;
+    line-height: 44px;
 }
 .left,.right{
-    width: 50px;
+    width: 60px;
     
 }
 .center{

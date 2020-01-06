@@ -24,8 +24,7 @@
       </tab-ber-item>
     </tab-ber>
   </div>
-</template>a
-aa
+</template>
 <script>
 import TabBer from '@/components/common/tabbar/TabBar';
 import TabBerItem from '@/components/common/tabbar/TabBarItem';
