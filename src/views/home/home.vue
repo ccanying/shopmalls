@@ -91,15 +91,23 @@ export default {
 
   created() {
     //请求轮播和tab导航数据
-    this.getHomeMutidata();
+    this.getHomeMutidata(),
 
     //请求商品数据
     this.getHomeGoods("pop");
     this.getHomeGoods("news");
     this.getHomeGoods("sell");
-     
+    
+    
   },
-
+   activated(){
+      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      this.$refs.scroll.refresh()
+    },
+    deactivated() {
+      this.saveY = this.$refs.scroll.scrollY
+      console.log(this.saveY)
+    },
   data () {
     return {
       banners:[],

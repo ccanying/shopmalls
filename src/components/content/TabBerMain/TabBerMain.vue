@@ -1,6 +1,5 @@
 <template>
   <div >
-    <router-view></router-view>
       <tab-ber>
       <tab-ber-item paths="/home" color="red">
         <div slot='tabber-text'>首页</div>

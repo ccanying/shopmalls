@@ -1,5 +1,5 @@
 <template>
-  <div class="goods-item">
+  <div class="goods-item" @click="itemClick">
    <img :src=pathss(this.goodsItem.show.img) alt="" @load="imgLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
@@ -14,6 +14,7 @@
 export default {
   data () {
     return {
+      iid:null
     }
   },
   props: {
@@ -37,8 +38,12 @@ export default {
       },
         imgLoad() {
 		    this.$bus.$emit('imgLoad')
-	    }
-    
+	    },
+    itemClick(){
+     const iid = this.goodsItem.page;
+     console.log(iid)
+     this.$router.push( '/detail/'+this.goodsItem.page)
+    }
   }
 };
 </script>
