@@ -1,9 +1,9 @@
 <template>
   <div class="recommend">
-    <div class="recommend-item" v-for="item in recommends" :key="item">
+    <div class="recommend-item" v-for="item in recommends" :key="item.id">
       <a :href="item.link">
         <img :src="item.image" alt="">
-        <span>{{item.title}}</span>
+        <div><span>{{item.title}}</span></div>
       </a>
     </div>
   </div>
@@ -32,11 +32,14 @@
   .recommend-item {
     flex: 1;
     text-align: center;
+     box-sizing:border-box;
   }
 
   .recommend img {
-    width: 80px;
-    height: 80px;
+   
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
+    overflow: hidden;
   }
 </style>
